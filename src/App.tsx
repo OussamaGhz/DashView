@@ -3,6 +3,7 @@ import { DevtoolsPanel, DevtoolsProvider } from "@refinedev/devtools";
 import { RefineKbar, RefineKbarProvider } from "@refinedev/kbar";
 
 import { dataProvider, liveProvider } from "./providers/data";
+import { authProvider } from "./providers/data/auth"
 
 import { useNotificationProvider } from "@refinedev/antd";
 import "@refinedev/antd/dist/reset.css";
@@ -13,7 +14,6 @@ import routerBindings, {
 } from "@refinedev/react-router-v6";
 import { App as AntdApp } from "antd";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { authProvider } from "./authProvider";
 import { ColorModeContextProvider } from "./contexts/color-mode";
 
 function App() {
