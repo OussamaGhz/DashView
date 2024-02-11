@@ -31,17 +31,15 @@ const getGraphQlErrors = (
   if ("errors" in body) {
     const errors = body?.errors;
     const messages = errors?.map((error) => error?.message)?.join("");
-    const code = errors?.[0].extensions?.code;
+    const code = errors?.[0].extensions?.code?.toString(); // Cast 'code' to string
     return {
       message: messages || JSON.stringify(errors),
-      statusCode: code || 500,
+      statusCode: code || "500",
     };
   }
 
   return null;
 };
-
-
 
 export const fetchWraper = async (url: string, options: RequestInit) => {
   const response = await customFetch(url, options);
