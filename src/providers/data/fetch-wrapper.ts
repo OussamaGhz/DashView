@@ -41,6 +41,8 @@ const getGraphQlErrors = (
   return null;
 };
 
+
+
 export const fetchWraper = async (url: string, options: RequestInit) => {
   const response = await customFetch(url, options);
   const responseClone = response.clone();
