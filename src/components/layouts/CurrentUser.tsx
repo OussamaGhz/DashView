@@ -10,6 +10,7 @@ import { useGetIdentity } from "@refinedev/core";
   3. define the base url and the paths on ts config (tsconfig.ts)
   4. add code gen script on package file (package.json)
   5. create mutations and queries (see graphql folder)
+  6. run codegen command to generate all types
 */
 
 // importing the User type form graphql schema
@@ -25,7 +26,13 @@ const CurrentUser = () => {
       overlayInnerStyle={{ padding: 0 }}
       overlayStyle={{ zIndex: 999 }}
     >
-      <Avatar />
+      <Avatar
+        name={user?.name || ""}
+        src={user?.avatarUrl}
+        style={{ cursor: "pointer" }}
+        size={"default"}
+        
+      />
     </Popover>
   );
 };

@@ -2,20 +2,21 @@ import { Avatar as AntAvatar } from "antd";
 import { AvatarProps } from "antd";
 
 type props = AvatarProps & {
-  name: string,
-}
+  name: string;
+};
 
-const Avatar = ({name, style, ...rest}: props) => {
+const Avatar = ({ name, style, ...rest }: props) => {
   return (
     <AntAvatar
       size={"small"}
-      alt="user avatar"
+      alt={name}
       style={{
         ...style,
         display: "flex",
         alignItems: "center",
         border: "none",
       }}
+      {...rest}
     >
       {name}
     </AntAvatar>
