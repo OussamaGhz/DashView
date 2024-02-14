@@ -1,8 +1,8 @@
-export const getThemeMode = () => {
+export const getThemeMode = (): string | null => {
   return localStorage.getItem("colorMode");
 };
 
-export const getBgColor = () => {
+export const getBgColor = (): string => {
   const colorMode = getThemeMode();
   if (colorMode === "dark") {
     return "#000";

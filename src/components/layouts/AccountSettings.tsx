@@ -104,7 +104,7 @@ export const AccountSettings = ({ opened, setOpened, userId }: Props) => {
       open={opened}
       width={756}
       styles={{
-        body: { background: bgColor, padding: 0 },
+        body: { background: bgColor, padding: 0 },  
         header: { display: "none" },
       }}
     >
