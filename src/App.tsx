@@ -25,6 +25,7 @@ import { Home } from "./pages/home";
 import { ForgotPassword, Login, Register } from "./pages";
 import Layout from "./components/layouts";
 import { resources } from "./config/resources";
+import './index.css';
 
 function App() {
   return (
