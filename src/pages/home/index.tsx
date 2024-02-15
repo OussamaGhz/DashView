@@ -3,15 +3,16 @@ import UpcomingEvents from "@/components/home/upcoming-events";
 import { Col, Row } from "antd";
 
 export const Home = () => {
+  // setting the structure of the home page
   return (
     <div>
-      <Row gutter={[32, 32]} style={{ marginTop: "32px" }}>
+      <Row gutter={[32, 32]}>
         <Col
           xs={24}
           sm={24}
           xl={8}
           style={{
-            height: "460px",
+            height: "400px",
           }}
         >
           <UpcomingEvents />
@@ -21,12 +22,11 @@ export const Home = () => {
           sm={24}
           xl={8}
           style={{
-            height: "460px",
+            height: "400px",
           }}
         >
           <DealsCharts />
         </Col>
-        
       </Row>
     </div>
   );

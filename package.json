@@ -5,6 +5,7 @@
   "type": "module",
   "dependencies": {
     "@ant-design/icons": "^5.0.1",
+    "@ant-design/plots": "^2.1.13",
     "@refinedev/antd": "^5.37.1",
     "@refinedev/cli": "^2.16.21",
     "@refinedev/core": "^4.46.1",
@@ -44,7 +45,6 @@
     "preview": "refine start",
     "refine": "refine",
     "codegen": "graphql-codegen"
-    
   },
   "browserslist": {
     "production": [
