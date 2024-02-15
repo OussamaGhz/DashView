@@ -13,7 +13,7 @@ const Header = () => {
     position: "sticky",
     zIndex: 999,
     top: 0,
-  };  
+  };
   return (
     <Layout.Header style={customStyles}>
       <Space align="center" size={"middle"}>

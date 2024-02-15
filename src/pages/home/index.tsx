@@ -1,3 +1,5 @@
+import DealsCharts from "@/components/home/deals-chart";
+import UpcomingEvents from "@/components/home/upcoming-events";
 import { Col, Row } from "antd";
 
 export const Home = () => {
@@ -12,7 +14,7 @@ export const Home = () => {
             height: "460px",
           }}
         >
-          CalanderUpcomingEvents
+          <UpcomingEvents />
         </Col>
         <Col
           xs={24}
@@ -22,18 +24,9 @@ export const Home = () => {
             height: "460px",
           }}
         >
-          testfor nwo
+          <DealsCharts />
         </Col>
-        <Col
-          xs={24}
-          sm={24}
-          xl={8}
-          style={{
-            height: "460px",
-          }}
-        >
-          test test
-        </Col>
+        
       </Row>
     </div>
   );
