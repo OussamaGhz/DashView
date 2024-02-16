@@ -6,9 +6,7 @@ import { useList } from "@refinedev/core";
 import { DASHBOARD_DEALS_CHART_QUERY } from "@/graphql/queries";
 import { useMemo } from "react";
 import { mapDealsData } from "@/utilities/helpers";
-import {
-  DashboardDealsChartQuery,
-} from "@/graphql/types";
+import { DashboardDealsChartQuery } from "@/graphql/types";
 import { GetFieldsFromList } from "@refinedev/nestjs-query";
 
 const DealsCharts = () => {
@@ -67,8 +65,8 @@ const DealsCharts = () => {
     theme: {
       defaultColor: "#fff",
     },
+    width: 500,
   };
-  
 
   return (
     <Card
@@ -78,8 +76,9 @@ const DealsCharts = () => {
           padding: "8px 16px",
         },
         body: {
-          padding: "0 2rem",
+          padding: "1rem 2rem",
           paddingInline: "20px",
+          overflow: "auto",
         },
       }}
       title={
