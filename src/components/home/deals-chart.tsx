@@ -8,7 +8,6 @@ import { useMemo } from "react";
 import { mapDealsData } from "@/utilities/helpers";
 import {
   DashboardDealsChartQuery,
-  DashboardDealsChartQueryVariables,
 } from "@/graphql/types";
 import { GetFieldsFromList } from "@refinedev/nestjs-query";
 
@@ -39,13 +38,13 @@ const DealsCharts = () => {
     legend: {
       offsetY: -6,
       textStyle: {
-        fill: "#fff", // Adjust legend text color
+        fill: "#fff",
       },
     },
     xAxis: {
       label: {
         style: {
-          fill: "#fff", // Adjust x-axis label text color
+          fill: "#fff",
         },
       },
     },
@@ -56,17 +55,17 @@ const DealsCharts = () => {
           return `$${Number(v) / 1000}k`;
         },
         style: {
-          fill: "#fff", // Adjust y-axis label text color
+          fill: "#fff",
         },
       },
     },
     label: {
       style: {
-        fill: "#fff", // Adjust data label text color
+        fill: "#fff",
       },
     },
     theme: {
-      defaultColor: "#fff", // Adjust the default text color
+      defaultColor: "#fff",
     },
   };
   
