@@ -12,7 +12,7 @@ export const Home = () => {
           sm={24}
           xl={8}
           style={{
-            height: "400px",
+            height: "460px",
           }}
         >
           <UpcomingEvents />
@@ -22,7 +22,7 @@ export const Home = () => {
           sm={24}
           xl={8}
           style={{
-            height: "400px",
+            height: "460px",
           }}
         >
           <DealsCharts />

@@ -16,7 +16,7 @@ const UpcomingEvents = () => {
       },
     ],
     meta: {
-      gqlQuery: DASHBORAD_CALENDAR_UPCOMING_EVENTS_QUERY,
+      gqlQuery: DASHBORAD_CALENDAR_UPCOMING_EVENTS_QUERY, 
     },
   });
 
