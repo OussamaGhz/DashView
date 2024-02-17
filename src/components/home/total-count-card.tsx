@@ -43,7 +43,18 @@ const TotalCountCard = ({ resource, isLoading, data }: Props) => {
         }
       }
 
+    },
+    smooth: true,
+    line: {
+      color: primaryColor,
+    },
+    areaStyle: () => {
+      return {
+        fill: `l(270) 0:#fff 0.2:${secondaryColor} 1:${primaryColor}` // gradient color
+      }
+     
     }
+
   };
   return (
     <Card
@@ -69,7 +80,6 @@ const TotalCountCard = ({ resource, isLoading, data }: Props) => {
           size="xxxl"
           strong
           style={{
-            marginTop: "20px",
             flex: 1,
             whiteSpace: "nowrap",
             flexShrink: 0,

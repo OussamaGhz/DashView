@@ -23,7 +23,7 @@ export const Home = () => {
           sm={24}
           xl={8}
           style={{
-            height: "160px",
+            height: "120px",
           }}
         >
           <TotalCountCard
@@ -37,7 +37,7 @@ export const Home = () => {
           sm={24}
           xl={8}
           style={{
-            height: "160px",
+            height: "120px",
           }}
         >
           <TotalCountCard
@@ -51,7 +51,7 @@ export const Home = () => {
           sm={24}
           xl={8}
           style={{
-            height: "160px",
+            height: "120px",
           }}
         >
           <TotalCountCard
