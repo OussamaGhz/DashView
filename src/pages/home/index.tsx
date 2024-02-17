@@ -20,7 +20,7 @@ export const Home = () => {
       <Row gutter={[32, 32]} style={{ marginBottom: "26px" }}>
         <Col
           xs={24}
-          sm={12}
+          sm={24}
           xl={8}
           style={{
             height: "160px",
@@ -34,21 +34,21 @@ export const Home = () => {
         </Col>
         <Col
           xs={24}
-          sm={12}
+          sm={24}
           xl={8}
           style={{
             height: "160px",
           }}
         >
           <TotalCountCard
-            resource="contracts"
+            resource="contacts"
             isLoading={isLoading}
             data={data?.data.contacts.totalCount}
           />
         </Col>
         <Col
           xs={24}
-          sm={12}
+          sm={24}
           xl={8}
           style={{
             height: "160px",

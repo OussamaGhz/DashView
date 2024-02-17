@@ -67,11 +67,11 @@ const DealsCharts = () => {
     },
     label: {
       style: {
-        fill: "#fff",
+        fill: getBgColor(mode),
       },
     },
     theme: {
-      defaultColor: "#fff",
+      defaultColor: getBgColor(mode),
     },
     width: 500,
   };

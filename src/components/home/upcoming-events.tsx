@@ -16,19 +16,17 @@ const UpcomingEvents = () => {
       },
     ],
     meta: {
-      gqlQuery: DASHBORAD_CALENDAR_UPCOMING_EVENTS_QUERY, 
+      gqlQuery: DASHBORAD_CALENDAR_UPCOMING_EVENTS_QUERY,
     },
   });
 
-  
-
   return (
     <Card
-      style={{ height: "100%",   overflowY: "auto" }}
+      style={{ height: "100%", overflowY: "auto" }}
       headStyle={{
         padding: "8px 16px",
       }}
-      bodyStyle={{ padding: "0 2rem", paddingInline: "20px", }} // Adjust the marginTop value to match the height of your fixed header
+      bodyStyle={{ padding: "0 2rem", paddingInline: "20px" }} // Adjust the marginTop value to match the height of your fixed header
       title={
         <div
           style={{
