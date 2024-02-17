@@ -4,10 +4,12 @@ import { Text } from "../text";
 import { Area, AreaConfig } from "@ant-design/plots";
 import { useList } from "@refinedev/core";
 import { DASHBOARD_DEALS_CHART_QUERY } from "@/graphql/queries";
-import { useMemo } from "react";
+import { useContext, useMemo } from "react";
 import { mapDealsData } from "@/utilities/helpers";
 import { DashboardDealsChartQuery } from "@/graphql/types";
 import { GetFieldsFromList } from "@refinedev/nestjs-query";
+import { getThemeMode } from "@/utilities/get-color-mode";
+import { ColorModeContext } from "@/contexts/color-mode";
 
 const DealsCharts = () => {
   const { data, isLoading } = useList<
@@ -24,6 +26,12 @@ const DealsCharts = () => {
     return mapDealsData(data?.data);
   }, [data?.data]);
 
+  const getBgColor = (mode: string) => {
+    return mode === "light" ? "#001529" : "#fff";
+  };
+
+  const { mode } = useContext(ColorModeContext);
+
   const config: AreaConfig = {
     data: dealData,
     xField: "timeText",
@@ -36,13 +44,13 @@ const DealsCharts = () => {
     legend: {
       offsetY: -6,
       textStyle: {
-        fill: "#fff",
+        fill: getBgColor(mode),
       },
     },
     xAxis: {
       label: {
         style: {
-          fill: "#fff",
+          fill: getBgColor(mode),
         },
       },
     },
@@ -53,7 +61,7 @@ const DealsCharts = () => {
           return `$${Number(v) / 1000}k`;
         },
         style: {
-          fill: "#fff",
+          fill: getBgColor(mode),
         },
       },
     },

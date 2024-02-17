@@ -1,4 +1,5 @@
 import { Card } from "antd";
+import { totalCountVariants } from "@/constants";
 
 type Props = {
   resource: string;
@@ -7,9 +8,17 @@ type Props = {
 };
 
 const TotalCountCard = ({ resource, isLoading, data }: Props) => {
-  return <Card style={{ height: "100%" }} >
-    <h1>{resource}</h1>
-  </Card>;
+//   const { icon } = totalCountVariants[resource];
+  
+
+  return (
+    <Card
+      style={{ height: "100%" }}
+      bodyStyle={{ padding: "8px" }}
+      size="small"
+    >
+    </Card>
+  );
 };
 
 export default TotalCountCard;
