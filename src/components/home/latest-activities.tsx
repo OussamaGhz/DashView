@@ -34,6 +34,8 @@ const LatestAcivities = () => {
     },
   });
 
+  console.log(deals);
+
   return (
     <Card
       style={{ height: "100%" }}
@@ -80,12 +82,14 @@ const LatestAcivities = () => {
                   <List.Item.Meta
                     title={dayjs(deal?.createdAt).format("MMM DD, YYYY HH:mm")}
                     avatar={
-                      <Avatar
-                        shape="square"
-                        size={48}
-                        src={deal?.company.avatarUrl}
-                        name={deal?.company.name}
-                      />
+                      deal ? (
+                        <Avatar
+                          shape="square"
+                          size={48}
+                          src={deal.company.avatarUrl}
+                          name={deal.company.name}
+                        />
+                      ) : null
                     }
                     description={
                       <Text size="sm">
