@@ -25,7 +25,8 @@ import { Home } from "./pages/home";
 import { ForgotPassword, Login, Register } from "./pages";
 import Layout from "./components/layouts";
 import { resources } from "./config/resources";
-import './index.css';
+import "./index.css";
+import Companies from "./pages/companies/list";
 
 function App() {
   return (
@@ -71,6 +72,7 @@ function App() {
                     }
                   >
                     <Route index element={<Home />} />
+                    <Route path="/companies" element={<Companies />} />
                   </Route>
                 </Routes>
                 <RefineKbar />

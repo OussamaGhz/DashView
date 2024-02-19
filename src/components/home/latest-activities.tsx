@@ -74,7 +74,6 @@ const LatestAcivities = () => {
               const deal = deals?.data?.find(
                 (deal) => deal.id == item.targetId
               );
-              console.log(deal);
 
               return (
                 <List.Item>
