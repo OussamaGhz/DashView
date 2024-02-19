@@ -8,7 +8,7 @@ import { API_URL, dataProvider } from "./index";
 export const authCredentials = {
   email: "michael.scott@dundermifflin.com",
   password: "demodemo",
-};
+}; 
 
 export const authProvider: AuthProvider = {
   login: async ({ email }) => {

@@ -74,6 +74,7 @@ const DealsCharts = () => {
       defaultColor: getBgColor(mode),
     },
     width: 500,
+   height: 300,
   };
 
   return (

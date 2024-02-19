@@ -5,6 +5,7 @@ import { Card, Col, Row } from "antd";
 import { useCustom, useList } from "@refinedev/core";
 import { DashboardTotalCountsQuery } from "@/graphql/types";
 import { DASHBOARD_TOTAL_COUNTS_QUERY } from "@/graphql/queries";
+import LatestAcivities from "@/components/home/latest-activities";
 
 export const Home = () => {
   const { data, isLoading } = useCustom<DashboardTotalCountsQuery>({
@@ -81,6 +82,9 @@ export const Home = () => {
           }}
         >
           <DealsCharts />
+        </Col>
+        <Col xs={24} style={{ height: "2OOpx" }}>  
+          <LatestAcivities />
         </Col>
       </Row>
     </div>

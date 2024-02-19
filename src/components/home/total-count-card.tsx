@@ -2,7 +2,7 @@ import { Card } from "antd";
 import { totalCountVariants } from "@/constants";
 import { Text } from "../text";
 import { Area } from "@ant-design/plots";
-import AreaChart, { AreaConfig } from "@ant-design/plots/es/components/area";
+import { AreaConfig } from "@ant-design/plots/es/components/area";
 
 type Props = {
   resource: "companies" | "contacts" | "deals";
@@ -10,7 +10,7 @@ type Props = {
   data: number | undefined;
 };
 
-const TotalCountCard = ({ resource, isLoading, data }: Props) => {
+const TotalCountCard = ({ resource, data }: Props) => {
   const {
     primaryColor = "",
     secondaryColor = "",
@@ -32,17 +32,16 @@ const TotalCountCard = ({ resource, isLoading, data }: Props) => {
       tickCount: 12,
       label: {
         style: {
-          stroke: "transparent"
-        }
+          stroke: "transparent",
+        },
       },
       grid: {
         line: {
           style: {
-            stroke: "transparent"
-          }
-        }
-      }
-
+            stroke: "transparent",
+          },
+        },
+      },
     },
     smooth: true,
     line: {
@@ -50,11 +49,10 @@ const TotalCountCard = ({ resource, isLoading, data }: Props) => {
     },
     areaStyle: () => {
       return {
-        fill: `l(270) 0:#fff 0.2:${secondaryColor} 1:${primaryColor}` // gradient color
-      }
-     
-    }
-
+        fill: `l(270) 0:#fff 0.2:${secondaryColor} 1:${primaryColor}`, // gradient color
+      };
+    },
+    height: 50,
   };
   return (
     <Card

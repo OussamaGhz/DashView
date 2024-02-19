@@ -19,7 +19,7 @@ const Avatar = ({ name, style, ...rest }: props) => {
       }}
       {...rest}
     >
-      {getNameInitials(name)}
+      {getNameInitials(name)} 
     </AntAvatar>
   );
 };

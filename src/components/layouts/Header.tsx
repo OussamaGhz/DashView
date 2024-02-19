@@ -33,6 +33,7 @@ const Header = () => {
         shape="round"
         type="primary"
         size="large"
+        style={{ width: "20%" }}
       >
         Switch to {mode === "light" ? "Dark" : "Light"} Mode
       </Button>
