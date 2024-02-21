@@ -1,8 +1,9 @@
 import Companies from "./list";
-import { Button, Form, Input, Modal, Space } from "antd";
+import { Button, Form, Input, Modal, Select, Space } from "antd";
 import { useGo } from "@refinedev/core";
-import { useModalForm } from "@refinedev/antd";
+import { useModalForm, useSelect } from "@refinedev/antd";
 import { CREATE_COMPANY_MUTATION } from "@/graphql/mutations";
+import { USERS_SELECT_QUERY } from "@/graphql/queries";
 
 const Create = () => {
   const go = useGo();
@@ -25,17 +26,28 @@ const Create = () => {
     },
   });
 
+  const { queryResult, selectProps } = useSelect({
+    resource: "users",
+    optionLabel: "name",
+    optionValue: "id",
+    meta: {
+      gqlQuery: USERS_SELECT_QUERY,
+    },
+  });
+
   return (
     <Companies>
       <Modal
         {...modalProps}
-        maskClosable={true} // Set maskClosable to true
+        maskClosable={true}
         onCancel={() => goToList}
         title={"Create Company"}
         footer={null}
         width={512}
+        cancelButtonProps={{ onClick: () => goToList }}
+        closeIcon={false}
       >
-        <Form {...formProps} >
+        <Form {...formProps} style={{ marginTop: "20px" }} layout={"vertical"}>
           <Form.Item
             label={"Company name"}
             name={"name"}
@@ -44,11 +56,14 @@ const Create = () => {
             <Input placeholder="Company Name" />
           </Form.Item>
           <Form.Item
-            label={"Company name"}
-            name={"name"}
+            label={"Sales owner"}
+            name={"salesOwnerId"}
             rules={[{ required: true }]}
           >
-            <Input placeholder="Company Name" />
+            <Select
+              placeholder="Please enter Sales owner name"
+              {...selectProps}
+            />
           </Form.Item>
           <Form.Item>
             <Space>
