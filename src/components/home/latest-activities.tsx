@@ -34,8 +34,6 @@ const LatestAcivities = () => {
     },
   });
 
-  console.log(deals);
-
   return (
     <Card
       style={{ height: "100%" }}

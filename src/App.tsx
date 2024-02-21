@@ -27,6 +27,7 @@ import Layout from "./components/layouts";
 import { resources } from "./config/resources";
 import "./index.css";
 import Companies from "./pages/companies/list";
+import Create from "./pages/companies/new-company";
 
 function App() {
   return (
@@ -72,7 +73,10 @@ function App() {
                     }
                   >
                     <Route index element={<Home />} />
-                    <Route path="/companies" element={<Companies />} />
+                    <Route path="/companies">
+                      <Route index element={<Companies />} />
+                      <Route path="new" element={<Create />} />
+                    </Route>
                   </Route>
                 </Routes>
                 <RefineKbar />
