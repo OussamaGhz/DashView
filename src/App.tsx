@@ -28,6 +28,7 @@ import { resources } from "./config/resources";
 import "./index.css";
 import Companies from "./pages/companies/list";
 import Create from "./pages/companies/new-company";
+import FirstPage from "./pages/tasks/page";
 
 function App() {
   return (
@@ -76,6 +77,10 @@ function App() {
                     <Route path="/companies">
                       <Route index element={<Companies />} />
                       <Route path="new" element={<Create />} />
+                    </Route>
+                    <Route path="/tasks">
+                      <Route index element={<FirstPage />} />
+                     
                     </Route>
                   </Route>
                 </Routes>
